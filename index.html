@@ -3,11 +3,11 @@
 <html>
 
 <head>
-    <title>QONQR Poland zone map</title>
-
+    <title>Zone map</title>
+    <meta name="description" content="This map is based on neon-ninja map">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" href="https://i.imgur.com/S36Vab6.png"/>
+    <link rel="shortcut icon" href="https://qonqr.com/Images/favicon.ico/android-icon-192x192.png"/>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://rawcdn.githack.com/robertleeplummerjr/Leaflet.glify/466c3696d9f67b7833089c15317ae9b6d7e5a30f/dist/glify-browser.js"></script>
@@ -608,9 +608,7 @@
                     <option value=1>less than 20k</option>
                     <option value=2>from 20k to 50k</option>
                     <option value=3 selected>more than 50k</option>
-                </select><br><br>
-                <a id='statsButton' class='link' onclick='statsToggle()'>Show/hide stats</a><div id='stats' style='display:none'></div>
-                <a href='https://github.com/Nokimo/QONQR_zonedata'>GitHub</a>`;
+                </select><br>`;
             L.DomEvent.disableClickPropagation(div);
             return div;
         };
