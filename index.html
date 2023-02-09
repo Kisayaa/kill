@@ -605,9 +605,9 @@
                     <option value=6>faceless +</option>
                 </select><br>
                 Size <select id='filter'>
-                    <option value=1 selected>less than 20k</option>
+                    <option value=1>less than 20k</option>
                     <option value=2>from 20k to 50k</option>
-                    <option value=3>more than 50k</option>
+                    <option value=3 selected>more than 50k</option>
                 </select><br><br>
                 <a id='statsButton' class='link' onclick='statsToggle()'>Show/hide stats</a><div id='stats' style='display:none'></div>
                 <a href='https://github.com/Nokimo/QONQR_zonedata'>GitHub</a>`;
@@ -770,7 +770,7 @@
         falcessbot.addTo(map);
 
         window.minusfilter = 2;
-        window.countfilter = 1;
+        window.countfilter = 3;
         window.timefilterName = "day";
         window.timefilter = getTimeFromName(window.timefilterName);
         
