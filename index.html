@@ -591,10 +591,10 @@
             var div = L.DomUtil.create('div', 'info legend');
             div.innerHTML += 
                 `Activity <select id="filtertime">
-                    <option value="month" selected>last month</option>
+                    <option value="month">last month</option>
                     <option value="week">last week</option>
                     <option value="3days">last 3 days</option>
-                    <option value="day">last day</option>
+                    <option value="day" selected>last day</option>
                 </select><br>
                 Change <select id='minusfilter'>
                     <option value=1>legion -</option>
@@ -771,7 +771,7 @@
 
         window.minusfilter = 2;
         window.countfilter = 1;
-        window.timefilterName = "all";
+        window.timefilterName = "day";
         window.timefilter = getTimeFromName(window.timefilterName);
         
         
