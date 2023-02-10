@@ -327,7 +327,7 @@
                 {
                     var data = window.data.filter(e => 
                     e.TotalCount <= 20000 && 
-                    e.SwarmDelta < 0 &&    
+                    e.SwarmDelta <= -2000 &&    
                     (e.LegionDelta >= 9000 || e.FacelessDelta >= 9000) &&
                     new Date(e.LastUpdateDateUtc.replace(" ", "T") + "Z") > window.timefilter &&
                     window.teamfilter.includes(e.ZoneControlState))   
@@ -352,7 +352,7 @@
                     
                     var data = window.data.filter(e => 
                     e.TotalCount <= 20000 && 
-                    e.SwarmDelta > 0 &&                          
+                    e.SwarmDelta <= -2000 &&                            
                     new Date(e.LastUpdateDateUtc.replace(" ", "T") + "Z") > window.timefilter &&
                     window.teamfilter.includes(e.ZoneControlState))   
                     
@@ -382,7 +382,7 @@
                     var data = window.data.filter(e => 
                     e.TotalCount >= 20000 &&
                     e.TotalCount <= 50000 &&
-                    e.SwarmDelta < 0 &&
+                    e.SwarmDelta <= -2000 &&   
                     (e.LegionDelta >= 9000 || e.FacelessDelta >= 9000) &&                          
                     new Date(e.LastUpdateDateUtc.replace(" ", "T") + "Z") > window.timefilter &&
                     window.teamfilter.includes(e.ZoneControlState))   
@@ -410,7 +410,7 @@
                     var data = window.data.filter(e => 
                     e.TotalCount >= 20000 &&
                     e.TotalCount <= 50000 &&
-                    e.SwarmDelta > 0 &&                          
+                    e.SwarmDelta <= -2000 &&                            
                     new Date(e.LastUpdateDateUtc.replace(" ", "T") + "Z") > window.timefilter &&
                     window.teamfilter.includes(e.ZoneControlState))   
                     
@@ -439,7 +439,7 @@
                 {
                     var data = window.data.filter(e => 
                     e.TotalCount >= 50000 &&
-                    e.SwarmDelta < 0 &&
+                    e.SwarmDelta <= -2000 &&
                     (e.LegionDelta >= 9000 || e.FacelessDelta >= 9000) &&         
                     (e.LegionCount <= 200000 && e.FacelessCount <= 200000) &&                    
                     new Date(e.LastUpdateDateUtc.replace(" ", "T") + "Z") > window.timefilter &&
@@ -465,7 +465,7 @@
                     
                     var data = window.data.filter(e => 
                     e.TotalCount >= 50000 &&
-                    e.SwarmDelta > 0 &&                          
+                    e.SwarmDelta <= -2000 &&                         
                     new Date(e.LastUpdateDateUtc.replace(" ", "T") + "Z") > window.timefilter &&
                     window.teamfilter.includes(e.ZoneControlState))   
                     
@@ -625,11 +625,10 @@
         rangeinfo.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend range');
             div.innerHTML += 
-                `Zasięg strzału: <br>
-                <input id="K64" type="checkbox"> 64 km 
-                <input id="K48" type="checkbox"> 48 km <br>
-                <input id="K40" type="checkbox"> 40 km 
-                <input id="K32" type="checkbox"> 32 km <br>`;
+                `Range of action: <br>
+                <input id="K48" type="checkbox"> 48 km (ZA)<br>
+                <input id="K40" type="checkbox"> 40 km (Shock)<br>
+                <input id="K32" type="checkbox"> 32 km (Plasma)<br>`;
             L.DomEvent.disableClickPropagation(div);
             return div;
         };
