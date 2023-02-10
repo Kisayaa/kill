@@ -590,13 +590,13 @@
         legend.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend');
             div.innerHTML += 
-                `Activity <select id="filtertime">
+                `Activity <select id="filtertime" style="width:101px;">
                     <option value="month">last month</option>
                     <option value="week">last week</option>
                     <option value="3days">last 3 days</option>
                     <option value="day" selected>last day</option>
                 </select><br>
-                Change <select id='minusfilter'>
+                Change <select id='minusfilter' style="width:97px;">
                     <option value=1>legion -</option>
                     <option value=2 selected>swarm -</option>
                     <option value=3>faceless -</option>
@@ -625,7 +625,7 @@
         rangeinfo.onAdd = function (map) {
             var div = L.DomUtil.create('div', 'info legend range');
             div.innerHTML += 
-                `Range of action: <br>
+                `Range: <br>
                 <input id="K48" type="checkbox"> 48 km (ZA)<br>
                 <input id="K40" type="checkbox"> 40 km (Shock)<br>
                 <input id="K32" type="checkbox"> 32 km (Plasma)<br>`;
